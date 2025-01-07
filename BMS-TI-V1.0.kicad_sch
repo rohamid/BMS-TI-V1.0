@@ -271,6 +271,104 @@
 			)
 		)
 	)
+	(sheet
+		(at 120.65 129.54)
+		(size 31.75 31.75)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f5e36afc-4a94-420d-a8e6-d57c9c557573")
+		(property "Sheetname" "GAS-GAUGE-COMPANION"
+			(at 120.65 128.8284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "BQ78350.kicad_sch"
+			(at 120.65 161.8746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ALERT" bidirectional
+			(at 152.4 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "cf226414-e66f-444f-9a60-fb404f21186b")
+		)
+		(pin "~{KEYIN}" input
+			(at 152.4 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3e481742-fdf1-4214-8f1b-657880957fa9")
+		)
+		(pin "~{PRES}" input
+			(at 152.4 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "4976e1f1-10ef-4204-8196-bebcbdb04d29")
+		)
+		(pin "~{PRECHG}" output
+			(at 152.4 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "eed43499-c6c9-4b0b-b093-33f9efb1718b")
+		)
+		(pin "SCL" output
+			(at 152.4 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "bf59d0e2-6f8e-4647-a2ac-92aa3dab8119")
+		)
+		(pin "SDA" bidirectional
+			(at 152.4 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6189e4b6-59ca-4400-aea8-4b76f28a5ebb")
+		)
+		(instances
+			(project "BMS-TI-V1.0"
+				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf"
+					(page "4")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")

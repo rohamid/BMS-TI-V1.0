@@ -394,6 +394,10 @@
     [
       "2828e877-f339-433d-b0ca-4dccfacebcfd",
       "BAT-AFE"
+    ],
+    [
+      "f5e36afc-4a94-420d-a8e6-d57c9c557573",
+      "GAS-GAUGE-COMPANION"
     ]
   ],
   "text_variables": {}

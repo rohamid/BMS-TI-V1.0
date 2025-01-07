@@ -4568,6 +4568,7 @@
 	(hierarchical_label "DSG"
 		(shape output)
 		(at 167.64 106.68 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4591,6 +4592,7 @@
 	(hierarchical_label "CHG"
 		(shape output)
 		(at 167.64 109.22 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4638,6 +4640,7 @@
 	(hierarchical_label "SDA"
 		(shape bidirectional)
 		(at 185.42 78.74 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4661,6 +4664,7 @@
 	(hierarchical_label "SCL"
 		(shape input)
 		(at 185.42 81.28 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4684,6 +4688,7 @@
 	(hierarchical_label "CAP1"
 		(shape input)
 		(at 181.61 101.6 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
