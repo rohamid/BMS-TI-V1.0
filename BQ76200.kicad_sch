@@ -954,7 +954,7 @@
 				)
 			)
 		)
-		(symbol "Transistor_FET:IPT012N08N5"
+		(symbol "Transistor_FET:IRFS4115"
 			(pin_names hide)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -968,7 +968,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "IPT012N08N5"
+			(property "Value" "IRFS4115"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -977,7 +977,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
+			(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -988,7 +988,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
+			(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
 				(at 5.08 -3.81 0)
 				(effects
 					(font
@@ -998,7 +998,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
+			(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1007,7 +1007,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "OptiMOS Power MOSFET N-MOS"
+			(property "ki_keywords" "N-Channel HEXFET MOSFET"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1016,7 +1016,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Infineon*PG*HSOF*"
+			(property "ki_fp_filters" "TO?263*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1025,7 +1025,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "IPT012N08N5_0_1"
+			(symbol "IRFS4115_0_1"
 				(polyline
 					(pts
 						(xy 0.254 0) (xy -2.54 0)
@@ -1192,8 +1192,8 @@
 					)
 				)
 			)
-			(symbol "IPT012N08N5_1_1"
-				(pin input line
+			(symbol "IRFS4115_1_1"
+				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
 					(name "G"
@@ -1212,9 +1212,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "S"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1230,9 +1230,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "D"
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2888,6 +2888,17 @@
 		)
 		(uuid "fd81008a-4703-4156-a0a5-c6d7b65d0fda")
 	)
+	(text "MOSFET CANDIDATE:\n1. PSMN4R8-100BSEJ (NEXPERIA)\n2. CSD19536KTT (TEXAS INSTRUMENS)\n3. NCEP85T25D (WUXI NCEP POWER)\n4. NCEP039N10D (WUXI NCEP POWER)\n5. NCEP020N10LL -- TOLL PACKAGE (WUXI NCEP POWER)\n6. NCE40H29D (WUXI NCEP POWER)\n7. NCEP023N10LL -- TOLL PACKAGE (WUXI NCEP POWER)\n8. NCEP12T12D (WUXI NCEP POWER)\n9. IPB180N04S4-01 (INFINEON)\n10. IRF3710STRLPBF (INFINEON)\n11. IRFR1205TRPBF (INFINEON)\n12. "
+		(exclude_from_sim no)
+		(at 207.01 131.064 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "587c1039-1519-4b8a-9ad8-73fa6e6cac75")
+	)
 	(label "DRAIN"
 		(at 179.07 71.12 0)
 		(fields_autoplaced yes)
@@ -3065,7 +3076,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 147.32 109.22 0)
 			(effects
 				(font
@@ -3102,80 +3113,6 @@
 			(project "BMS-TI-V1.0"
 				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
 					(reference "L3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
-		(at 187.96 91.44 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "079da197-b712-4e4c-8bad-aa48b7a66be2")
-		(property "Reference" "Q7"
-			(at 187.96 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IPT012N08N5"
-			(at 187.96 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
-			(at 189.865 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
-			(at 191.77 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
-			(at 187.96 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "3e7a4910-3283-4327-bb98-a37dae626911")
-		)
-		(pin "2"
-			(uuid "71de149c-20b4-439a-83b6-d052d75512f9")
-		)
-		(pin "1"
-			(uuid "00309c6a-31c0-4a89-8c1d-916e431d8c68")
-		)
-		(instances
-			(project "BMS-TI-V1.0"
-				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
-					(reference "Q7")
 					(unit 1)
 				)
 			)
@@ -3248,80 +3185,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
-		(at 179.07 100.33 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1232dd46-8963-4358-9df0-135ca17d2be2")
-		(property "Reference" "Q6"
-			(at 179.07 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IPT012N08N5"
-			(at 179.07 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
-			(at 180.975 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
-			(at 182.88 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
-			(at 179.07 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "04c11367-4e86-4816-a405-0cae2bfe8618")
-		)
-		(pin "2"
-			(uuid "7cddf547-0494-4453-a708-2ab5a2915e5c")
-		)
-		(pin "1"
-			(uuid "03f4934e-041f-405e-8bd4-789f878ab4a5")
-		)
-		(instances
-			(project "BMS-TI-V1.0"
-				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
-					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 138.43 45.72 90)
 		(unit 1)
@@ -3347,7 +3210,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 142.24 44.7548 0)
 			(effects
 				(font
@@ -3417,7 +3280,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 241.6048 55.88 0)
 			(effects
 				(font
@@ -3487,7 +3350,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 129.54 109.22 0)
 			(effects
 				(font
@@ -3620,7 +3483,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 115.57 124.46 0)
 			(effects
 				(font
@@ -3690,7 +3553,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 96.8248 106.68 0)
 			(effects
 				(font
@@ -3760,7 +3623,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 104.14 137.16 0)
 			(effects
 				(font
@@ -3827,7 +3690,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 115.57 128.27 0)
 			(effects
 				(font
@@ -3896,7 +3759,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 217.17 113.03 0)
 			(effects
 				(font
@@ -3939,7 +3802,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
+		(lib_id "Transistor_FET:IRFS4115")
 		(at 129.54 73.66 270)
 		(mirror x)
 		(unit 1)
@@ -3947,9 +3810,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4e2fb46f-76b2-4aa5-8b30-b550646d5281")
-		(property "Reference" "Q1"
+		(uuid "4f17abf5-1fa2-4a4d-9947-a325a4986e56")
+		(property "Reference" "Q4"
 			(at 129.54 64.77 90)
 			(effects
 				(font
@@ -3957,7 +3819,7 @@
 				)
 			)
 		)
-		(property "Value" "IPT012N08N5"
+		(property "Value" "IRFS4115"
 			(at 129.54 67.31 90)
 			(effects
 				(font
@@ -3965,7 +3827,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
 			(at 127.635 68.58 0)
 			(effects
 				(font
@@ -3976,7 +3838,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
 			(at 125.73 68.58 0)
 			(effects
 				(font
@@ -3986,7 +3848,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
 			(at 129.54 73.66 0)
 			(effects
 				(font
@@ -3996,88 +3858,13 @@
 			)
 		)
 		(pin "3"
-			(uuid "5d815b18-7db5-4926-a5f0-31356ae7dd09")
-		)
-		(pin "2"
-			(uuid "234969f9-20d9-4461-8b70-e67059c9e900")
+			(uuid "a6dacf4c-a264-43e6-a5e2-dc9c8938ad79")
 		)
 		(pin "1"
-			(uuid "09f3f762-e80c-4c82-87b0-051eefcded2c")
-		)
-		(instances
-			(project "BMS-TI-V1.0"
-				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
-		(at 147.32 91.44 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "50c15f9f-bb79-4cee-b8ee-9c5c4eb4d5fe")
-		(property "Reference" "Q4"
-			(at 147.32 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IPT012N08N5"
-			(at 147.32 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
-			(at 145.415 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
-			(at 143.51 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
-			(at 147.32 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "52f5e8e8-6dcb-4001-b3ee-13379da8a5e4")
+			(uuid "66a7e992-3d1e-4f51-ad42-10d35acb6942")
 		)
 		(pin "2"
-			(uuid "e04e33c5-2ea0-4788-82ff-9ff30c89b775")
-		)
-		(pin "1"
-			(uuid "fa401d91-8b78-459d-900c-480d3f7a7811")
+			(uuid "6e73e4c7-3167-40ce-a414-14abe0f84088")
 		)
 		(instances
 			(project "BMS-TI-V1.0"
@@ -4116,7 +3903,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 138.43 109.22 0)
 			(effects
 				(font
@@ -4225,6 +4012,79 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:IRFS4115")
+		(at 205.74 73.66 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "58f55fe8-c741-42ad-b719-382eea09b32d")
+		(property "Reference" "Q8"
+			(at 205.74 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRFS4115"
+			(at 205.74 67.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 207.645 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
+			(at 209.55 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
+			(at 205.74 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "14e93a25-253a-420d-925f-b8c1d5c63f4a")
+		)
+		(pin "1"
+			(uuid "3ea7004c-5908-4ab9-ba1c-c8f3133445ae")
+		)
+		(pin "2"
+			(uuid "7acef90a-461d-4dd8-8487-7d413fc74d5c")
+		)
+		(instances
+			(project "BMS-TI-V1.0"
+				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 151.13 45.72 90)
 		(unit 1)
@@ -4250,7 +4110,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 154.94 44.7548 0)
 			(effects
 				(font
@@ -4293,6 +4153,79 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:IRFS4115")
+		(at 179.07 100.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6a234205-d48f-4b59-a556-ca3db99452a4")
+		(property "Reference" "Q5"
+			(at 179.07 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRFS4115"
+			(at 179.07 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 180.975 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
+			(at 182.88 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
+			(at 179.07 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "961d1702-fb88-415b-b98d-c38c8003e9b8")
+		)
+		(pin "1"
+			(uuid "399a8d86-64b7-4a2b-b56f-092b4df3f5bb")
+		)
+		(pin "2"
+			(uuid "05a9c463-07bb-4e90-aee2-f68b6a5d8188")
+		)
+		(instances
+			(project "BMS-TI-V1.0"
+				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 104.14 147.32 0)
 		(unit 1)
@@ -4320,7 +4253,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 104.14 147.32 0)
 			(effects
 				(font
@@ -4388,7 +4321,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 118.11 113.03 0)
 			(effects
 				(font
@@ -4570,7 +4503,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 205.74 109.22 0)
 			(effects
 				(font
@@ -4637,7 +4570,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 115.57 120.65 0)
 			(effects
 				(font
@@ -4680,34 +4613,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
-		(at 138.43 82.55 270)
+		(lib_id "Transistor_FET:IRFS4115")
+		(at 156.21 100.33 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8f7488d5-45e2-49fc-81ca-b5cb14766e39")
-		(property "Reference" "Q2"
-			(at 138.43 73.66 90)
+		(uuid "929d4eec-1de1-468b-a996-3914c8be5502")
+		(property "Reference" "Q18"
+			(at 156.21 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "IPT012N08N5"
-			(at 138.43 76.2 90)
+		(property "Value" "IRFS4115"
+			(at 156.21 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
-			(at 136.525 77.47 0)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 154.305 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4717,8 +4649,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
-			(at 134.62 77.47 0)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
+			(at 152.4 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4727,8 +4659,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
-			(at 138.43 82.55 0)
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
+			(at 156.21 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4737,18 +4669,18 @@
 			)
 		)
 		(pin "3"
-			(uuid "785403f5-ff28-4363-b572-c3645b63101e")
-		)
-		(pin "2"
-			(uuid "acde972d-db1d-4736-bc7d-5a4a87a1eb29")
+			(uuid "da6ac8d7-6324-4fd4-bdd0-22773f331c67")
 		)
 		(pin "1"
-			(uuid "ca45722a-aa8c-466e-aa68-ad0c194a05f2")
+			(uuid "cdbc3dbf-3fd5-47aa-bdf0-e7783b13d56e")
+		)
+		(pin "2"
+			(uuid "3d908798-7c9d-4972-b114-b7f1c649f8b5")
 		)
 		(instances
-			(project "BMS-TI-V1.0"
+			(project ""
 				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
-					(reference "Q2")
+					(reference "Q18")
 					(unit 1)
 				)
 			)
@@ -4782,7 +4714,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 196.85 109.22 0)
 			(effects
 				(font
@@ -4919,7 +4851,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 90.17 92.71 0)
 			(effects
 				(font
@@ -4962,34 +4894,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
-		(at 156.21 100.33 270)
-		(mirror x)
+		(lib_id "Transistor_FET:IRFS4115")
+		(at 196.85 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a74b6d41-e1b5-46dc-b077-2e1b7e9f3b75")
-		(property "Reference" "Q5"
-			(at 156.21 91.44 90)
+		(uuid "a764cd70-7cde-4557-83f6-6121a1bf4490")
+		(property "Reference" "Q7"
+			(at 196.85 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "IPT012N08N5"
-			(at 156.21 93.98 90)
+		(property "Value" "IRFS4115"
+			(at 196.85 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
-			(at 154.305 95.25 0)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 198.755 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4999,8 +4929,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
-			(at 152.4 95.25 0)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
+			(at 200.66 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5009,8 +4939,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
-			(at 156.21 100.33 0)
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
+			(at 196.85 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5019,18 +4949,18 @@
 			)
 		)
 		(pin "3"
-			(uuid "38986913-e61d-49ee-a060-bfda328c4ef5")
-		)
-		(pin "2"
-			(uuid "75f3c009-6bbe-4f37-8379-a68208ad6fb5")
+			(uuid "7d7b0425-0287-4a6e-96b1-8a79bd06b40d")
 		)
 		(pin "1"
-			(uuid "0ca682c7-41ad-4c5f-8ebb-08d385b63d81")
+			(uuid "7a90a3d8-732f-429d-b73f-db5f9f5742ec")
+		)
+		(pin "2"
+			(uuid "84288277-73bb-402d-abb6-ac81188f4b1c")
 		)
 		(instances
 			(project "BMS-TI-V1.0"
 				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
-					(reference "Q5")
+					(reference "Q7")
 					(unit 1)
 				)
 			)
@@ -5062,7 +4992,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 130.81 54.61 0)
 			(effects
 				(font
@@ -5105,80 +5035,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
-		(at 205.74 73.66 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "abf55ef2-1351-4a33-9ee3-d44c9aa1a1dd")
-		(property "Reference" "Q9"
-			(at 205.74 64.77 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IPT012N08N5"
-			(at 205.74 67.31 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
-			(at 207.645 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
-			(at 209.55 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
-			(at 205.74 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "5213652d-015c-4666-86bf-84bcf1e1b0b4")
-		)
-		(pin "2"
-			(uuid "2117702e-de54-42ea-9259-905bc7282765")
-		)
-		(pin "1"
-			(uuid "c9cf3e35-24c3-44d4-8599-7d5abd7ba2d2")
-		)
-		(instances
-			(project "BMS-TI-V1.0"
-				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
-					(reference "Q9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:L_Small")
 		(at 179.07 109.22 0)
 		(unit 1)
@@ -5206,7 +5062,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 179.07 109.22 0)
 			(effects
 				(font
@@ -5315,6 +5171,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:IRFS4115")
+		(at 146.05 57.15 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b43e396c-42f3-455d-a914-3de97d9d13b9")
+		(property "Reference" "Q3"
+			(at 146.05 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRFS4115"
+			(at 146.05 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 144.145 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
+			(at 142.24 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
+			(at 146.05 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "2606e662-6c5f-4dfc-8dcb-2cd18816a2a3")
+		)
+		(pin "1"
+			(uuid "bb75697c-51b1-4895-953a-fe5a58970557")
+		)
+		(pin "2"
+			(uuid "b8e087ff-e71c-4466-85f3-74118e949c26")
+		)
+		(instances
+			(project "BMS-TI-V1.0"
+				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 66.04 97.79 270)
 		(unit 1)
@@ -5340,7 +5270,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 62.23 98.7552 0)
 			(effects
 				(font
@@ -5410,7 +5340,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 72.39 92.71 0)
 			(effects
 				(font
@@ -5480,7 +5410,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 229.87 55.88 0)
 			(effects
 				(font
@@ -5568,7 +5498,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 156.21 109.22 0)
 			(effects
 				(font
@@ -5636,7 +5566,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 157.48 63.5 0)
 			(effects
 				(font
@@ -5679,6 +5609,153 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:IRFS4115")
+		(at 147.32 91.44 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9db9ae3-8357-4b81-9a19-c5404172dd96")
+		(property "Reference" "Q1"
+			(at 147.32 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRFS4115"
+			(at 147.32 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 145.415 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
+			(at 143.51 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
+			(at 147.32 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "86d43a22-f96d-4e64-ad19-f56f2b2b2eff")
+		)
+		(pin "1"
+			(uuid "93416ccc-0757-4823-bba1-f6a898824240")
+		)
+		(pin "2"
+			(uuid "84929fba-54c0-4450-aa4d-ca6f4b2e3ea0")
+		)
+		(instances
+			(project "BMS-TI-V1.0"
+				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:IRFS4115")
+		(at 187.96 91.44 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d0e1d30f-e1f6-493e-9732-5ca43de6788b")
+		(property "Reference" "Q6"
+			(at 187.96 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRFS4115"
+			(at 187.96 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 189.865 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
+			(at 191.77 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
+			(at 187.96 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "37fc6547-3f4a-45b8-bf63-7ddc6d8ef560")
+		)
+		(pin "1"
+			(uuid "1e29ac54-18e2-41c6-9133-095446add986")
+		)
+		(pin "2"
+			(uuid "d4ca8360-8ad2-4439-9797-56bc9cdf9c55")
+		)
+		(instances
+			(project "BMS-TI-V1.0"
+				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 96.52 97.79 90)
 		(mirror x)
@@ -5705,7 +5782,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 100.33 98.7552 0)
 			(effects
 				(font
@@ -5742,155 +5819,6 @@
 			(project "BMS-TI-V1.0"
 				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
-		(at 146.05 57.15 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d27f2b9c-4025-4b77-9de6-5d2220719f47")
-		(property "Reference" "Q3"
-			(at 146.05 48.26 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IPT012N08N5"
-			(at 146.05 50.8 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
-			(at 144.145 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
-			(at 142.24 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
-			(at 146.05 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "ba55237e-52e5-433a-9b9d-5bb17cc0eda4")
-		)
-		(pin "2"
-			(uuid "32d4d8dc-255f-43f9-86ec-1be2c8568ed4")
-		)
-		(pin "1"
-			(uuid "da0ecb50-2750-4fd9-b35a-d85d634227cb")
-		)
-		(instances
-			(project "BMS-TI-V1.0"
-				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:IPT012N08N5")
-		(at 196.85 82.55 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d6bd01b5-f99e-4ae8-bbe0-579ca7c42422")
-		(property "Reference" "Q8"
-			(at 196.85 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IPT012N08N5"
-			(at 196.85 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1"
-			(at 198.755 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-IPT012N08N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014aca59127a1eb9"
-			(at 200.66 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "300A Id, 80V Vds, OptiMOS N-Channel Power MOSFET, 1.2mOhm Ron, Qg (typ) 178.0nC, PG-HSOF-8"
-			(at 196.85 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "93c37b3c-2caa-4433-99c8-d039ad62c565")
-		)
-		(pin "2"
-			(uuid "655335db-513e-4433-ac07-cd6d95314d54")
-		)
-		(pin "1"
-			(uuid "5b122769-b8e1-485e-b035-3a6f419323f0")
-		)
-		(instances
-			(project "BMS-TI-V1.0"
-				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
-					(reference "Q8")
 					(unit 1)
 				)
 			)
@@ -5990,7 +5918,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 187.96 109.22 0)
 			(effects
 				(font
@@ -6033,6 +5961,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:IRFS4115")
+		(at 138.43 82.55 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e254d183-eb6b-413e-93e6-724e4887ad58")
+		(property "Reference" "Q2"
+			(at 138.43 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRFS4115"
+			(at 138.43 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 136.525 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f"
+			(at 134.62 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "99A Id, 150V Vds, 10.3mOhm Rds, N-Channel HEXFET Power MOSFET, D2PAK"
+			(at 138.43 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "e8d86793-556a-42ec-ae80-215dd8fecacc")
+		)
+		(pin "1"
+			(uuid "ab1d8118-9271-497f-84d0-3f86deb63ee5")
+		)
+		(pin "2"
+			(uuid "208dbda3-c86c-4b1b-9971-1ef3c10207bf")
+		)
+		(instances
+			(project "BMS-TI-V1.0"
+				(path "/1b322c88-a1e6-4706-b5ad-2d81e9035abf/a1710a27-6515-4ba6-90ad-223e36627776"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 242.57 50.8 180)
 		(unit 1)
@@ -6060,7 +6062,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 241.6048 46.99 0)
 			(effects
 				(font
